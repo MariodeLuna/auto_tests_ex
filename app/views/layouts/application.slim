@@ -1,0 +1,31 @@
+doctype html
+html
+	head
+  		title Deremate
+		/! Latest compiled and minified CSS
+		link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css"
+
+		/! Optional theme
+		link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css"
+
+
+		== stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+		== javascript_include_tag 'application', 'data-turbolinks-track' => true
+		== csrf_meta_tags
+
+	body
+		== render "layouts/navbar"
+		ul[class="hmenu"]
+ 
+			== render 'devise/menu/login_items'
+
+		p class="notice" = notice
+		p class="alert" = alert
+
+
+		== yield
+
+
+
+		/! Latest compiled and minified JavaScript
+		script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"
