@@ -6,7 +6,11 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
+User.destroy_all
 Product.destroy_all
+
+user = User.create(email:"test@test.com", password:"password", role: 1)
+
 
 100.times do |x| 
 	Product.create(name: "Product: #{x}", description: "Descripcion del producto: #{x}", price: 15)

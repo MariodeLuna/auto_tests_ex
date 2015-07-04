@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
 
+
+  resources :landings, only: :index
+
+  devise_for :users
   resources :products, only: :index do
     resources :bids, only: :create
   end
